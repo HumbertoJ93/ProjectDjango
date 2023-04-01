@@ -1,0 +1,25 @@
+{% extends 'WebApp/base.html' %}
+{%load static %}
+{%block content%}
+{%for post in posts%}
+<div>
+    <p>
+        <h2>{{post.titulo}}</h2>
+        <p>{{post.contenido}}</p>
+        <p><img src="{{post.imagen.url}}" alt="Imagen del post"></p>
+        <h2>Autor: {{post.autor}}</h2>
+    </p>
+</div>
+{% endfor %}
+<section>
+    <div style="width:75%; margin:auto; background-color:white; text-align:center;  ">
+
+        <h3>Categorias:</h3>
+        {%for post in posts%}
+            {%for categoria in post.categorias.all%}
+                <a href="{% url 'categoria' categoria.id %}"> {{categoria.nombre}} </a> &nbsp;&nbsp;&nbsp;
+            {% endfor %}
+        {% endfor %}
+    </div>
+</section>
+{%endblock%}

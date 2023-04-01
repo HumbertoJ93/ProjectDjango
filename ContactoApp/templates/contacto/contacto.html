@@ -1,0 +1,18 @@
+{% extends 'WebApp/base.html' %}
+{%load static %}
+{%block content%}
+<div>
+
+    {% if "valido" in request.GET %}
+
+        <h2>Tu consulta ha sido enviada de forma exitosa.</h2>
+        <p>Pronto nos estaremos comunicando contigo.</p>
+
+    {% endif%}
+    <form action="" method="POST">
+    {% csrf_token %}
+    <table>{{formulario_contacto.as_table}}</table>
+    <input type="submit" value="Enviar">
+    </form>
+</div>
+{%endblock%}
