@@ -1,13 +1,16 @@
 {% extends 'WebApp/base.html' %}
 {%load static %}
 {%block content%}
+<div class="container">
     {%for servicio in servicios%}
-    <div>
-        <p>
-            <h2>{{servicio.titulo}}</h2>
-            <p>{{servicio.contenido}}</p>
-            <p><img src="{{servicio.imagen.url}}" alt="Imagen del servicio"></p>
-        </p>
-    </div>
+        <div class="card" style="width: 18rem;">
+            <img src="{{servicio.imagen.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{servicio.titulo}}</h5>
+                <p class="card-text">{{servicio.contenido}}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
     {% endfor %}
+</div>
 {%endblock%}

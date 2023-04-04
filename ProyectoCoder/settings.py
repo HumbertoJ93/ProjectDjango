@@ -46,6 +46,10 @@ INSTALLED_APPS = [
     'AutenticacionApp',
     'crispy_forms',
     'crispy_bootstrap4',
+    'CRUDApp'
+    #--------Para el blog---------
+    # 'ckeditor',
+    # 'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -157,3 +161,14 @@ MESSAGE_TAGS={
     mensajes_alerta.ERROR: 'danger',
 }
     
+# #---------------------CKEDITOR------------------
+# CKEDITOR_UPLOAD_PATH="uploads/"
+# CKEDITOR_BASEPATH="/static/ckeditor/ckeditor/"
+
+# CKEDITOR_CONFIGS ={
+#     'default': {
+#         'toolbar': 'full',
+#         'height': 300,
+#         'width':'100%',
+#     }
+# }

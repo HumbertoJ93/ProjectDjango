@@ -1,7 +1,7 @@
 {% extends 'WebApp/base.html' %}
 {%load static %}
 {%block content%}
-<div>
+<div class="container">
 
     {% if "valido" in request.GET %}
 
@@ -10,9 +10,16 @@
 
     {% endif%}
     <form action="" method="POST">
-    {% csrf_token %}
-    <table>{{formulario_contacto.as_table}}</table>
-    <input type="submit" value="Enviar">
-    </form>
-</div>
-{%endblock%}
+        {% csrf_token %}
+        <table>{{formulario_contacto.as_table}}</table>
+        <input type="submit" value="Enviar">
+        </form>
+    </div>
+    {%endblock%}
+
+
+
+
+
+
+

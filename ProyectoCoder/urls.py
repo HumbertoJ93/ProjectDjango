@@ -23,4 +23,5 @@ urlpatterns = [
     path('blog/', include('BlogApp.urls')),
     path('contacto/', include('ContactoApp.urls')),
     path('auth/', include('AutenticacionApp.urls')),
+    path('crud/', include('CRUDApp.urls')),
 ]

@@ -2,13 +2,20 @@
 {%load static %}
 {%block content%}
 {%for post in posts%}
-<div>
-    <p>
-        <h2>{{post.titulo}}</h2>
-        <p>{{post.contenido}}</p>
-        <p><img src="{{post.imagen.url}}" alt="Imagen del post"></p>
-        <h2>Autor: {{post.autor}}</h2>
-    </p>
+
+
+
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <img src="{{post.imagen.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{post.titulo}}</h5>
+        <p class="card-text">{{post.contenido}}</p>
+        <p class="card-text">{{post.autor}}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    </div>
 </div>
 {% endfor %}
 <section>
